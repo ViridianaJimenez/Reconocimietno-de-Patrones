@@ -57,12 +57,52 @@ h1{
     text-align:center;
 }
 
-#about p{
+#about .Boton p{
     text-align: center;
 }
 
-#about label{
+#about .Boton label{
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+}
+
+#about .tablaGrafo .alineaGrafo{
+    overflow-y: scroll;
+    height: 700px;
+}
+
+#about .tablaGrafo .alineaGrafo::-webkit-scrollbar{
+    width: 7px;
+}
+
+#about .tablaGrafo .alineaGrafo::-webkit-scrollbar-thumb{
+    background:#5D6D7E;
+}
+
+#infoSintac p, li{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#infoSintac .img-dolor{
+    height: 350px;
+    width: 500px;
+}
+
+#piePagina img{
+    height: 40px;
+    width: 40px;
+}
+
+#piePagina p{
+    text-align: justify;
+    font-size: small;
+}
+
+#piePagina .textAl{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: small;
 }

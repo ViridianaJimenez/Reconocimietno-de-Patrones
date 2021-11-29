@@ -3,54 +3,46 @@
 
 {% block contenido %}
 <div class="container" id="about">
+    <div class="Boton">
 
+        <br>
+        <h1>Generar Grafo</h1>
+
+        <p>Ingresa el umbral para generar el grafo correspondiente</p>
+
+        <form class="form-inline d-flex justify-content-center" method="POST" action="{% url 'about:about' %}">
+            {% csrf_token %}
+            <label for="exampleFormControlText" class="col-sm-3 col-form-label">Ingresa el valor del umbral</label>
+            <input type="text" class="form-control mr-2" name="valorUmbral" placeholder="">
+            <button type="submit" class="btn btn-primary">Procesar</button>
+        </form>
+
+    </div>
     <br>
-    <h1>Generar Grafo</h1>
+    <div>
+        <div class="container d-flex justify-content-center align-items-center tablaGrafo">
+            <div class="alineaGrafo">
+                <table class="table table-borderless table-dark">
+                    <thead>
+                        <tr>
+                            <th>Relacion</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for valorGraf in grafo %}
+                        <tr>
 
-    <p>Ingresa el umbral para generar el grafo correspondiente</p>
+                            {% for datoGraf in valorGraf%}
+                            <td align="center">{{datoGraf}}</td>
+                            {% endfor %}
 
-    <form class="form-inline d-flex justify-content-center" method="POST" action="{% url 'about:about' %}">
-        {% csrf_token %}
-        <label for="exampleFormControlText" class="col-sm-3 col-form-label">Ingresa el valor del umbral</label>
-        <input type="text" class="form-control mr-2" name="valorUmbral" placeholder="">
-        <button type="submit" class="btn btn-primary">Procesar</button>
-    </form>
-
-
-    {% if grafo != null %}
-    <br>
-    <div class="scroll-bg" style="width:176px;
-        margin-left: auto;
-        margin-right: auto;">
-        <div class="container" style="
-            overflow: hidden;
-            overflow-y: scroll;
-            height: 500px;">
-
-            <table style="border: 1px solid black;
-                background-color:lightgray;">
-                <thead>
-                    <tr>
-                        <th>Relacion</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for valorGraf in grafo %}
-                    <tr>
-
-                        {% for datoGraf in valorGraf%}
-                        <td align="center">{{datoGraf}}</td>
+                        </tr>
                         {% endfor %}
-
-                    </tr>
-                    {% endfor %}
-                </tbody>
-
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        {% endif %}
-
     </div>
 </div>
 {% endblock contenido %}

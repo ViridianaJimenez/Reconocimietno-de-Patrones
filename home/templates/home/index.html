@@ -31,9 +31,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about:about' %}">Grafo</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -85,11 +82,10 @@
         <div class="row">
             <div class="col-sm-5">
                 <h2 align="center">Muestras</h2>
-                <p>Se agrega una tabla de muestras sobre una base de datos del cancer de prostata, junto una matriz de
+                <p>Se agrega una tabla de muestras sobre una base de datos del cancer de prostata, junto a una matriz de
                     distancias generadas entre cada registro</p>
                 <div class="container d-flex justify-content-center align-items-center" id="tablaMuestras">
                     <div class="tablealing">
-
                         <table class="p-0 table table-borderless table-dark">
 
                             <thead>
@@ -143,9 +139,48 @@
     {% endblock contenido %}
 
     <hr>
-    <div class="container">
-        <p>Proyecto Reconocimiento de Patrones Sintactico Estructural</p>
+    <div class="container" id="piePagina">
+        <div class="row">
+            <div class="col-sm-8">
+                <p>Proyecto Reconocimiento de Patrones Sintactico Estructural</p>
+                <p>Contacto</p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="https://i.pinimg.com/originals/ce/c8/a6/cec8a6239de29acbfcfee0ccec995b9f.png"
+                                        alt="boton-facebook"></i>
+                                </div>
+                                <p class="textAl">Facebook</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
+                                        alt="boton-facebook"></i>
+                                </div>
+                                <p class="textAl">Instagram</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
+                                        alt="boton-facebook"></i>
+                                </div>
+                                <p class="textAl">Twitter</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p>Proyecto realizado por: </p>
+                <p>Viridiana Jimenez Pineda</p>
+                <p>Raúl Alejandro Luis Carvarin</p>
+                <p>Grupo "M9"</p>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
