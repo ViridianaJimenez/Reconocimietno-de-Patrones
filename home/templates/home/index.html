@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,147 +8,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" href='{% static "css/index.css" %}' rel="stylesheet">
     <title>RSE Matutino</title>
 
 </head>
 
-<body style="background:SkyBlue;">
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navegacion">
+            <a class="navbar-brand" href="{% url 'home:home' %}">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home:home' %}">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'sintactico' %}">Informacion<span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about:about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sintactico' %}">Informacion<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about:about' %}">Grafo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     {% block contenido %}
     <div class="container">
-        <h1>
-            <CENTER>Cancer de prostata</CENTER>
-        </h1>
-
-
-        <p style="text-align: justify;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;">
-            El cáncer de próstata es el cáncer que se forma en la próstata. En los hombres, la próstata es una
-            glándula pequeña con forma de nuez, que produce el líquido seminal que nutre y transporta el esperma.
-        </p>
-
-        <p style="text-align: justify;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;">
-            El cáncer de próstata es uno de los tipos más comunes de cáncer. Muchos cánceres de próstata crecen
-            lentamente y permanecen limitados a la glándula prostática, en donde pueden no causar daño grave.
-            Pero, si bien algunos tipos de cáncer de próstata crecen lentamente y pueden necesitar un tratamiento
-            mínimo o no necesitar ningún tratamiento, otros tipos son agresivos y se pueden diseminar con rapidez.
-        </p>
-        <p style="text-align: justify;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;">
-            El cáncer de próstata que se detecta en forma temprana, cuando todavía está limitado a la glándula
-            prostática,
-            tiene mejores probabilidades de tener un tratamiento exitoso.
-        </p>
-
-
-        <div class="container">
+        <div id="infHome">
             <br>
-            <h2>Síntomas</h2>
-            <Pre>
-            <Font Face="Arial" size="4">
-            El cáncer de próstata puede no provocar signos ni síntomas en sus primeros estadios.
-            El cáncer de próstata que está más avanzado puede causar signos y síntomas como:
-                <li>Problemas para orinar
-                <li>Disminución en la fuerza del flujo de la orina
-                <li>Sangre en la orina
-                <li>Sangre en el semen
-                <li>Dolor de huesos
-                <li>Pérdida de peso sin intentarlo
-                <li>Disfunción eréctil
-            </Font>
-        
-        </Pre>
+            <h1>Cancer de prostata</h1>
+            <p>
+                El cáncer de próstata es el cáncer que se forma en la próstata. En los hombres, la próstata es una
+                glándula pequeña con forma de nuez, que produce el líquido seminal que nutre y transporta el esperma.
+            </p>
+            <p>
+                El cáncer de próstata es uno de los tipos más comunes de cáncer. Muchos cánceres de próstata crecen
+                lentamente y permanecen limitados a la glándula prostática, en donde pueden no causar daño grave.
+                Pero, si bien algunos tipos de cáncer de próstata crecen lentamente y pueden necesitar un tratamiento
+                mínimo o no necesitar ningún tratamiento, otros tipos son agresivos y se pueden diseminar con rapidez.
+            </p>
+            <p>
+                El cáncer de próstata que se detecta en forma temprana, cuando todavía está limitado a la glándula
+                prostática,
+                tiene mejores probabilidades de tener un tratamiento exitoso.
+            </p>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2>Síntomas</h2>
+
+                    <p>El cáncer de próstata puede no provocar signos ni síntomas en sus primeros estudios.</p>
+                    <p>El cáncer de próstata que está más avanzado puede causar signos y síntomas como:</p>
+
+                    <li>Problemas para orinar
+                    <li>Disminución en la fuerza del flujo de la orina
+                    <li>Sangre en la orina
+                    <li>Sangre en el semen
+                    <li>Dolor de huesos
+                    <li>Pérdida de peso sin intentarlo
+                    <li>Disfunción eréctil
+                </div>
+                <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                    <img class="img-thumbnail mx-auto d-block"
+                        src="https://biotechmagazineandnews.com/wp-content/uploads/2021/04/cancer-prostata.jpg"
+                        alt="cancer-prostata-tumores">
+                </div>
+            </div>
         </div>
-        <center>
+        <hr>
+        <div class="row">
+            <div class="col-sm-5">
+                <h2 align="center">Muestras</h2>
+                <p>Se agrega una tabla de muestras sobre una base de datos del cancer de prostata, junto una matriz de
+                    distancias generadas entre cada registro</p>
+                <div class="container d-flex justify-content-center align-items-center" id="tablaMuestras">
+                    <div class="tablealing">
 
-            <h2 align="center">Muestras</h2>
-            <table class="table table-borderless table-dark" style="overflow:scroll;
-        height:700px;
-        width:380px;">
+                        <table class="p-0 table table-borderless table-dark">
 
-                <thead>
-                    <tr>
-                        <th scope="col">Clave</th>
-                        <th scope="col">Temperatura</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Inflamacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for elemento in lista %}
+                            <thead>
+                                <tr>
+                                    <th scope="col">Clave</th>
+                                    <th scope="col">Temperatura</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Inflamacion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for elemento in lista %}
 
-                    <tr>
-                        <th scope="row">{{elemento.pk}}</th>
-                        <td>{{elemento.temperatura}}</td>
-                        <td>{{elemento.color}}</td>
-                        <td>{{elemento.inflamacion}}</td>
-                    </tr>
+                                <tr>
+                                    <th scope="row">{{elemento.pk}}</th>
+                                    <td>{{elemento.temperatura}}</td>
+                                    <td>{{elemento.color}}</td>
+                                    <td>{{elemento.inflamacion}}</td>
+                                </tr>
 
-                    {% endfor %}
-                </tbody>
-            </table>
-        </center>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-        <br>
+            <div class="col-sm-7">
+                <h2 align="center">Matriz de Distancias</h2>
+                <div class="container d-flex justify-content-center align-items-center" id="matriz">
+                    <div class="matrizaling">
+                        <table class="table table-borderless table-dark">
+                            <tbody>
+                                {% for valor in matrizDat %}
+                                <tr>
 
-        <h2 align="center">Matriz de Distancias</h2>
+                                    {% for dato in valor%}
+                                    <td align="center">{{dato}}</td>
+                                    {% endfor %}
 
-        <div class="container" style="overflow:scroll;
-    height:700px;
-    width:1200px;
-    margin-left: auto;
-    margin-right: auto;">
+                                </tr>
+                                {% endfor %}
+                            </tbody>
 
-            <table style="border: 1px solid black; 
-        width:500px; 
-        background-color:lightgray;">
-                <tbody>
-                    {% for valor in matrizDat %}
-                    <tr>
-
-                        {% for dato in valor%}
-                        <td align="center">{{dato}}</td>
-                        {% endfor %}
-
-                    </tr>
-                    {% endfor %}
-                </tbody>
-
-            </table>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {% endblock contenido %}
 
-    <br>
     <hr>
-
+    <div class="container">
+        <p>Proyecto Reconocimiento de Patrones Sintactico Estructural</p>
+    </div>
 </body>
 
 </html>

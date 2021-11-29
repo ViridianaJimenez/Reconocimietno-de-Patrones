@@ -1,0 +1,68 @@
+body{
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#navegacion li{
+    font-family:initial;
+    font-size: large;
+}
+
+#navegacion a{
+    font-family:initial;
+    font-size: large;
+}
+
+#infHome li{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#tablaMuestras .tablealing{
+    overflow-y: scroll;
+    height: 700px;
+}
+
+#tablaMuestras .tablealing::-webkit-scrollbar{
+    width: 7px;
+}
+
+#tablaMuestras .tablealing::-webkit-scrollbar-thumb{
+    background:#5D6D7E;
+}
+
+#matriz .matrizaling{
+    overflow: scroll;
+    height:800px;
+    max-width: 100%;
+}
+
+#matriz .matrizaling::-webkit-scrollbar{
+    width: 8px;
+}
+
+#matriz .matrizaling::-webkit-scrollbar-thumb{
+    background:#5D6D7E;
+}
+
+p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+h1{
+    text-align:center;
+}
+
+#about p{
+    text-align: center;
+}
+
+#about label{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
